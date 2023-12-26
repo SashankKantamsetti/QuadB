@@ -35,6 +35,7 @@ const Detailed = (props) => {
                     <div dangerouslySetInnerHTML={{ __html: props.summary }} className='det--summary' />
                     <Link to={`/${props.id}/${props.name}`}>
                         <button className='book'>Book Tickets</button></Link>
+                    <Link to={`/`} className='back'>Back Home</Link>
                 </div>
             </div>
         </div>

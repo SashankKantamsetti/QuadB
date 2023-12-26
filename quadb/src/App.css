@@ -165,27 +165,6 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 900px) {
-  .glass-overlay {
-    flex-direction: column;
-    width: fit-content;
-    height: fit-content;
-    position: absolute;
-    top: 50%;
-    display: flex;
-    justify-content: center;
-    left: 50%;
-    border-radius: 1.5rem;
-    transform: translate(-50%, -50%);
-    margin: auto auto;
-    flex-shrink: inherit;
-  }
-
-  .detail {
-    height: fit-content;
-  }
-}
-
 .form {
   display: flex;
   flex-direction: column;
@@ -223,4 +202,56 @@
 
 .submit-button {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 650px) {
+  .input-tile {
+    display: block;
+    padding: 10px;
+    margin: 15px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', 'sans-serif';
+    border-radius: 3px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .glass-overlay {
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    left: 50%;
+    border-radius: 1.5rem;
+    transform: translate(-50%, -50%);
+    margin: auto auto;
+    flex-shrink: inherit;
+  }
+
+  .detail {
+    height: fit-content;
+  }
+}
+
+.back {
+  font-family: 'Montserrat', 'sans-serif';
+  position: absolute;
+  top: 100%;
+  display: block;
+  transform: translateY(-100%);
+  padding: 0%;
+  margin: 0%;
+  color: black;
+}
+
+.back2 {
+  font-family: 'Montserrat', 'sans-serif';
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  margin: 30px;
+  color: white;
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 const Booking = () => {
     const params = useParams();
@@ -45,6 +45,7 @@ const Booking = () => {
                     <input className="input-tile" placeholder='Name' type="text" name="userName" value={formData.userName} onChange={handleInput} />
                     <input className="input-tile" placeholder="Email" type='email' name="userEmail" value={formData.userEmail} onChange={handleInput} />
                     <button className="input-tile submit-button" type="submit">Submit</button>
+                    <Link to={`/`} className='back2'>Back Home</Link>
                 </form>
             </div>
         </div>
