@@ -31,7 +31,7 @@ const Detailed = (props) => {
                         <img src={star} alt='star-png' className='star' />
                         <h4 className='det--rating'>{props.rating ? props.rating : "-"}</h4>
                     </div>
-                    <a href={props.url} className='webiste'>Learn More --- &gt;</a>
+                    <a href={props.url} className='website'>Learn More --- &gt;</a>
                     <div dangerouslySetInnerHTML={{ __html: props.summary }} className='det--summary' />
                     <Link to={`/${props.id}/${props.name}`}>
                         <button className='book'>Book Tickets</button></Link>
