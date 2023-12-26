@@ -1,5 +1,6 @@
 import React from 'react';
 import star from '../images/star-icon.svg'
+import { Link } from 'react-router-dom';
 
 const Detailed = (props) => {
     const divStyle = {
@@ -11,9 +12,14 @@ const Detailed = (props) => {
     };
 
     const overlayStyle = {
-        backdropFilter: 'blur(5px)', // Adjust the blur amount for the glass effect
-        backgroundColor: 'rgba(255, 255, 255, 0.5)', // Adjust the alpha for transparency
+        backdropFilter: 'blur(5px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
     };
+
+    if (window.matchMedia('(max-width: 900px)').matches) {
+        divStyle.backgroundImage = `url("${props.imgurl}")`;
+        divStyle.backgroundSize = "cover";
+    }
 
     return (
         <div className='detail' style={divStyle}>
@@ -27,7 +33,8 @@ const Detailed = (props) => {
                     </div>
                     <a href={props.url} className='webiste'>Learn More --- &gt;</a>
                     <div dangerouslySetInnerHTML={{ __html: props.summary }} className='det--summary' />
-                    <button className='book'>Book Tickets</button>
+                    <Link to={`/${props.id}/${props.name}`}>
+                        <button className='book'>Book Tickets</button></Link>
                 </div>
             </div>
         </div>

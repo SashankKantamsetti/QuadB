@@ -99,6 +99,7 @@
   height: 80%;
   margin: auto auto;
   flex-shrink: inherit;
+  box-shadow: 10px 10px 10px rgb(0, 0, 0, .7);
 }
 
 .content {
@@ -181,4 +182,9 @@
   .detail {
     height: fit-content;
   }
+}
+
+.form-overlay {
+  display: flex;
+  flex-direction: column;
 }

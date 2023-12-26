@@ -33,6 +33,7 @@ const ShowDes = () => {
             rating={reqShow.show.rating.average}
             imgurl={imageUrl}
             key={reqShow.show.id}
+            id={params.id}
             url={reqShow.show.url}
             name={reqShow.show.name}
             summary={reqShow.show.summary} />
